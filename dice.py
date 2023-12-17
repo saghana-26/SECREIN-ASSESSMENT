@@ -27,10 +27,13 @@ for i in sums:
     
 
 def undoom_dice(A,B):
-    A[0]=0
-    A[4]=1
-    A[5]=3
-    B[0]=2
+    A[0]=1
+    A[1]=2
+    A[2]=2
+    A[3]=3
+    A[4]=3
+    A[5]=4
+    B[0]=1
     B[1]=3
     B[2]=4
     B[3]=5
@@ -51,8 +54,8 @@ for i in A:
            undoom_sums[res]=1
         
 print("\nThe values of probability of sums after undoomed dice: \n")
-
-for i in undoom_sums:
+l=[*range(2,13)]
+for i in l:
     prob=format(undoom_sums[i]/com ,".3f")
     output="P(Sum = {})=  {}/{} = {} "
     print(output.format(i,undoom_sums[i],com,prob))
